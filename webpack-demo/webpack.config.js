@@ -4,12 +4,17 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
   // entry: './src/index.js',
   entry: {
-    index: './src/index.js',
+    index:{ import :  './src/index.js'},
     print: './src/print.js',
+    // abc: { import: './src/abc.js'},
+  
   },
+
+  devtool: 'inline-source-map',
   plugins: [
     new HtmlWebpackPlugin({
-      title: 'Output Management',
+      // title: 'Output Management',
+      title: 'Development',
     }),
   ],
   output: {
@@ -19,5 +24,10 @@ module.exports = {
     path: path.resolve(__dirname, 'dist'),
     clean:true,
   },
+  // optimization: {
+  //   splitChunks: {
+  //     chunks: 'all',
+  //   },
+  // },
   
 };
