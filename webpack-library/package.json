@@ -1,0 +1,20 @@
+{
+  "name": "webpack-library",
+  "version": "1.0.0",
+  "main": "dist/webpack-numbers.js",
+  "module": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack --mode development",
+    "watch": "webpack --watch --mode development",
+    "push": "git add . && git commit -m"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "lodash": "^4.17.21",
+    "webpack": "^5.30.0"
+  },
+  "devDependencies": {
+    "webpack-cli": "^4.6.0"
+  }
+}
